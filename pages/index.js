@@ -1,65 +1,72 @@
-import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 
-export default function Home() {
-  return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+const Home = () => {
+    return (
+        <div>
+            <section className='container'>
+                <spacer></spacer>
+                <div className='hero'>
+                    <p>Hi, my name is</p>
+                    <h1>Rajko Podinic.</h1>
+                    <h1>I build things for the web.</h1>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+                    <smallspacer></smallspacer>
+                    <p className={styles.heroDescription}>I’m a web developer based in Sydney, Australia specializing in building (and occasionally designing) exceptional websites, applications, and everything in between.</p>
+                    <smallspacer></smallspacer>
+                    <button className='primary-button center'>Lets Talk!</button>
+                    <smallspacer></smallspacer>
+                    <div className={styles.socialIcons}>
+                        <p className={styles.socialIcon}>Github Icon</p>
+                        <p className={styles.socialIcon}>Linkedin Icon</p>
+                        <p className={styles.socialIcon}>Insta Icon</p>
+                    </div>
+                </div>
+                <spacer></spacer>
+            </section>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+            
+            <section className='container'>
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+                <h1>Projects</h1>
+                <div className='section'>
+                    <div>
+                        <p>Image of rajko.com.au Dashboard</p>
+                    </div>
+        
+                    <div>
+                        <h2>Admin Dashboard</h2>
+                        <p>I built an admin dashboard which is the backbone of this website. It's built using Firebase Authentication and Firebase Real Time Database.</p>
+                        <p>The authentication allows me to keep my admin dashboard secure and the real time database allows me to create blog posts and other dynamic content which is pulled into the site via API calls.</p>
+                        <button className='primary-button'>Read More</button>
+                    </div>
+                </div>
+                <div className='section'>
+                    <div>
+                        <h2>YouTube Downloader</h2>
+                        <p>Using the YouTube API, I created a downloader which enables you to paste in a video link from YouTube and download your chosen video.</p>
+                        <p>Video formats include 360p all the way up to 1080p.</p>
+                        <button className='primary-button'>Read More</button>
+                    </div>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+                    <div>
+                        <p>Image of YouTube Downloader</p>
+                    </div>
+                </div>
+                <div className='section'>
+                    <div>
+                        <p>Image of Region Search App</p>
+                    </div>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+                    <div>
+                        <h2>Region Search App</h2>
+                        <p>A recent client needed an internal tool to search for corresponding regions based on Sydney post codes and suburb names.</p>
+                        <p>By entering a post code or suburb, the app spits out a list of results which match the input.</p>
+                        <button className='primary-button'>Read More</button>
+                    </div>
+                </div>
+            </section>
         </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
-  )
+    );
 }
+ 
+export default Home;

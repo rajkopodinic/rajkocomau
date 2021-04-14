@@ -1,9 +1,43 @@
+@font-face {
+  font-family: "PlusJakartaSans";
+  src: url("/fonts/PlusJakartaSans[wght].ttf");
+  font-style: medium;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PlusJakartaSans-p-bold";
+  src: url("/fonts/PlusJakartaSans[wght].ttf");
+  font-style: bold;
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PlusJakartaSans-h1";
+  src: url("/fonts/PlusJakartaSans[wght].ttf");
+  font-style: bold;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PlusJakartaSans-h2";
+  src: url("/fonts/PlusJakartaSans[wght].ttf");
+  font-weight: 550;
+  font-display: swap;
+}
+
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  justify-content: center;
+  align-items: center;
+  background-color: #fbfbfb;
+  padding: 0px;
+  margin: 0px;
+  color: #0f0f0f;
+  font-family: -apple-system, PlusJakartaSans, sans-serif;
 }
 
 a {
@@ -13,4 +47,196 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.navbar {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  padding: 10px 50px;
+  width: 100%;
+  background-color: rgb(26, 26, 26);
+  color: #fbfbfb;
+}
+
+.navItems {
+  place-self: center end;
+  grid-column: 9/13;
+}
+
+.navItem {
+  padding: 0.5rem;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(15%, 1fr));
+  padding: 0px 50px;
+  width: 100%;
+  height: 200px;
+  background-color: rgb(26, 26, 26);
+  color: #fbfbfb;
+}
+
+.footerLower {
+  display: grid;
+  text-align: center;
+  width: 100%;
+  height: 60px;
+  background-color: rgb(20, 20, 20);
+  color: white;
+}
+
+.footerItems {
+  display: block;
+  place-self: center;
+}
+
+.container {
+  display: grid;
+  place-self: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero {
+  display: inherit;
+  text-align: center;
+  align-items: stretch;
+}
+
+.section {
+  display: inherit;
+  grid-template-columns: repeat(12, minmax(50%, 1fr));
+  align-items: center;
+  max-width: 1200px;
+  height: 400px;
+  gap: 1rem;
+}
+
+.accentSection {
+  display: grid;
+  width: 100%;
+  background-color: rgb(240, 240, 240);
+}
+
+.subSection {
+  place-self: center;
+}
+
+spacer {
+  padding: 50px;
+}
+
+smallspacer {
+  padding: 1.5rem;
+}
+
+/* All text tags */
+
+h1 {
+  font-family: PlusJakartaSans-h1;
+  font-size: 3rem;
+  padding: 0;
+  margin: 0;
+}
+
+h2 {
+  font-family: PlusJakartaSans-h2;
+  font-size: 1.5rem;
+}
+
+p {
+  line-height: 1.5rem;
+  font-size: 1rem;
+}
+
+.center {
+  place-self: center;
+  text-align: center;
+}
+
+.primary-button {
+  background-color: rgb(26, 26, 26);
+  color: #fbfbfb;
+  border: none;
+  border-radius: 0.2rem;
+  width: 6rem;
+  height: 3rem;
+}
+
+.primary-button-form {
+  background-color: #e2f8e9;
+  color: #37bc64;
+  border: none;
+  border-radius: 0.2rem;
+  width: 100%;
+  height: 2.5rem;
+}
+
+.tab {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 0.2rem;
+  width: 200px;
+  height: 3rem;
+}
+
+.posts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-self:center;
+  margin: 50px 0px;
+  width: 100%;
+}
+
+.post {
+  background-color: white;
+  justify-content: left;
+  align-self: left;
+  padding:20px;
+  margin: 20px;
+  width: 400px;
+  height: 400px;
+}
+
+.form {
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 240px;
+  padding: 20px;
+  border-radius: 10px
+}
+
+#formStatus {
+  /* background-color: blue; */
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px;
+  align-self:right;
+  justify-content: right;
+}
+
+.form-input {
+  height: 2rem;
+  width: 100%;
+  margin: 0px 0px 10px 0px;
+}
+
+.shadow {
+  -webkit-box-shadow: 3px 3px 5px 6px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:    3px 3px 5px 6px #ccc;  /* Firefox 3.5 - 3.6 */
+  box-shadow:         1px 2px 2px 2px rgb(235, 235, 235);  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+}
+
+.success-message {
+  background-color: #e2f8e9;
+  color: #37bc64;
+  padding: 20px;
+  border-radius: 10px;
 }
