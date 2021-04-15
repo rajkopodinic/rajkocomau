@@ -1,6 +1,8 @@
 import styles from '../styles/Home.module.css'
+import {ButtonClicked} from '../lib/Functions'
 
 const Home = () => {
+
     return (
         <div>
             <section className='container'>
@@ -13,7 +15,7 @@ const Home = () => {
                     <smallspacer></smallspacer>
                     <p className={styles.heroDescription}>I’m a web developer based in Sydney, Australia specializing in building (and occasionally designing) exceptional websites, applications, and everything in between.</p>
                     <smallspacer></smallspacer>
-                    <button className='primary-button center'>Lets Talk!</button>
+                    <button className='primary-button center' onClick={ButtonClicked}>Lets Talk!</button>
                     <smallspacer></smallspacer>
                     <div className={styles.socialIcons}>
                         <p className={styles.socialIcon}>Github Icon</p>
